@@ -1,0 +1,14 @@
+syntax = "proto3";
+package pbgo;
+option go_package = "github.com/AzeroCoder/MyProtobuf/rest;rest";
+
+import "google/protobuf/descriptor.proto";
+
+extend google.protobuf.MethodOptions {
+    HttpRule restful_api = 20211101;
+}
+
+message HttpRule {
+  string get = 1;
+  string post = 2;
+}
